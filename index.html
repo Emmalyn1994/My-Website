@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmalyn Inutan | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+
+    <style>
+        /* Modern Reset & Smooth Scroll */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body { 
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
+            background: #f8fafc; 
+            color: #2d3748; 
+            line-height: 1.7; 
+        }
+
+        /* Header & Hero Section */
+        header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center;
+        }
+        
+        .profile-pic { 
+            width: 150px; height: 150px; 
+            border-radius: 50%; 
+            border: 4px solid rgba(255,255,255,0.3); 
+            object-fit: cover; 
+            margin-bottom: 20px;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+        .profile-pic:hover { transform: scale(1.05); border-color: #fff; }
+        
+        .header-text h1 { font-size: 3rem; letter-spacing: -1px; margin-bottom: 10px; }
+        .header-text p { font-size: 1.25rem; font-weight: 300; opacity: 0.9; }
+
+        /* Sticky Navigation */
+        nav { 
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: center; 
+            background: rgba(31, 31, 31, 0.95); 
+            backdrop-filter: blur(10px);
+            padding: 15px 0; 
+        }
+        nav a { 
+            margin: 0 15px; font-size: 0.9rem; font-weight: 600; 
+            color: #cbd5e0; transition: 0.3s; 
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        nav a:hover { color: #fff; }
+
+        /* Layout Container */
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        
+        section { 
+            background: #fff; padding: 40px; margin-bottom: 40px; 
+            border-radius: 16px; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+        }
+        h2 { 
+            color: #4a5568; margin-bottom: 25px; font-size: 1.8rem;
+            display: flex; align-items: center; gap: 10px;
+        }
+        h2::after { content: ""; flex: 1; height: 1px; background: #edf2f7; }
+
+        /* Skills Styling */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { 
+            background: #edf2f7; color: #4a5568; 
+            padding: 8px 18px; border-radius: 50px; 
+            font-size: 0.9rem; font-weight: 600; 
+        }
+
+        /* Project Cards */
+        .project-list { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .project-card { 
+            padding: 15px; border-left: 4px solid #667eea; 
+            background: #fdfdfd; transition: 0.2s;
+        }
+        .project-card:hover { background: #f7fafc; transform: translateX(5px); }
+
+        /* Education */
+        .school { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 30px; }
+        .school-logo { width: 70px; height: 70px; border-radius: 12px; object-fit: cover; background: #eee; }
+        .school-info strong { display: block; color: #2d3748; font-size: 1.1rem; }
+        .school-info span { color: #718096; font-size: 0.9rem; }
+
+        /* Contact Area */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .contact-item { text-align: center; padding: 20px; border: 1px solid #edf2f7; border-radius: 12px; }
+        .contact-item i { font-size: 1.5rem; color: #667eea; margin-bottom: 10px; }
+        .contact-item a { color: #4a5568; font-weight: bold; }
+
+        footer { text-align: center; padding: 40px; color: #718096; font-size: 0.9rem; }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .header-text h1 { font-size: 2.2rem; }
+            nav { overflow-x: auto; justify-content: flex-start; padding-left: 20px; }
+            section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="profile.png" alt="Emmalyn Inutan" class="profile-pic">
+    <div class="header-text">
+        <h1>Emmalyn Inutan</h1>
+        <p>BSIT Student • Web Developer • Creative Thinker</p>
+    </div>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <section id="about">
+        <h2><i class="fas fa-user-circle"></i> About Me</h2>
+        <p>I am a 31-year-old BSIT student at <strong>Southern Leyte State University</strong>, balancing the roles of a dedicated student and a proud mother of two. Based in Cambite, Tomas Oppus, I am passionate about bridging the gap between complex backend logic and user-friendly web interfaces.</p>
+    </section>
+
+    <section id="skills">
+        <h2><i class="fas fa-code"></i> Technical Skills</h2>
+        <div class="skills-container">
+            <span class="skill-tag">HTML5 & CSS3</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Android Development (Basics)</span>
+            <span class="skill-tag">UI Design (Visily)</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2><i class="fas fa-laptop-code"></i> Featured Projects</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <strong>Brgy. Cambite Information Management System</strong>
+                <p>A full-stack solution using Android and PHP to manage community data efficiently.</p>
+            </div>
+            <div class="project-card">
+                <strong>SLSU Hire</strong>
+                <p>A specialized job portal concept built with PHP and MySQL.</p>
+            </div>
+            <div class="project-card">
+                <strong>Tower Defense Prototype</strong>
+                <p>Game UI/UX design and logic flow created using Visily.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+
+        <div class="school">
+            <img src="slsu logo.png" alt="SLSU" class="school-logo">
+            <div class="school-info">
+                <strong>Southern Leyte State University</strong>
+                <span>BS in Information Technology | 2023 - 2026 (Expected)</span>
+                <p><small>Focus: Data Structures, Database Management, Web Systems</small></p>
+            </div>
+        </div>
+
+        <div class="school">
+            <img src="Dafenhs.jpg" alt="High School" class="school-logo">
+            <div class="school-info">
+                <strong>Don Agustin F. Escaño National High School</strong>
+                <span>High School Diploma | Graduated 2023</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i><br>
+                <a href="mailto:germoinutane@gmail.com">Email Me</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i><br>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i><br>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Emmalyn Inutan • Built with passion and code.</p>
+</footer>
+
+</body>
+</html>
